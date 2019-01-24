@@ -1,7 +1,6 @@
 import javafx.scene.paint.Color;
 
-public abstract class Car {
-	
+public abstract class Car implements Movable {
 
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
@@ -46,5 +45,23 @@ public abstract class Car {
 
 	public void brake(double amount) {
 		decrementSpeed(amount);
+	}
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnLeft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnRight() {
+		// TODO Auto-generated method stub
+		
 	}
 }
