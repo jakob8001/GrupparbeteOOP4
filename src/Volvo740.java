@@ -1,11 +1,20 @@
 import javafx.scene.paint.Color;
 
-public abstract class Car implements Movable {
+public class Volvo740 {
+
+	public final static double trimFactor = 1.25;
 
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
 	public Color color; // Color of the car
 	public String modelName; // The car model name
+
+	public Volvo740() {
+		color = Color.RED;
+		enginePower = 100;
+		modelName = "Volvo740";
+		stopEngine();
+	}
 
 	public double getEnginePower() {
 		return enginePower;
@@ -28,7 +37,7 @@ public abstract class Car implements Movable {
 	}
 
 	public double speedFactor() {
-		return enginePower;
+		return enginePower * 0.01 * trimFactor;
 	}
 
 	public void incrementSpeed(double amount) {
@@ -45,24 +54,5 @@ public abstract class Car implements Movable {
 
 	public void brake(double amount) {
 		decrementSpeed(amount);
-		
-	}
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void turnLeft() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void turnRight() {
-		// TODO Auto-generated method stub
-		
 	}
 }

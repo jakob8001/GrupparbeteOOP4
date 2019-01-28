@@ -1,11 +1,21 @@
 import javafx.scene.paint.Color;
 
-public abstract class Car implements Movable {
+public class Saab95 {
+
+	public boolean turboOn;
 
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
 	public Color color; // Color of the car
 	public String modelName; // The car model name
+
+	public Saab95() {
+		color = Color.BLACK;
+		enginePower = 125;
+		turboOn = false;
+		modelName = "Saab95";
+		stopEngine();
+	}
 
 	public double getEnginePower() {
 		return enginePower;
@@ -27,8 +37,19 @@ public abstract class Car implements Movable {
 		currentSpeed = 0;
 	}
 
+	public void setTurboOn() {
+		turboOn = true;
+	}
+
+	public void setTurboOff() {
+		turboOn = false;
+	}
+
 	public double speedFactor() {
-		return enginePower;
+		double turbo = 1;
+		if (turboOn)
+			turbo = 1.3;
+		return enginePower * 0.01 * turbo;
 	}
 
 	public void incrementSpeed(double amount) {
@@ -45,24 +66,5 @@ public abstract class Car implements Movable {
 
 	public void brake(double amount) {
 		decrementSpeed(amount);
-		
-	}
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void turnLeft() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void turnRight() {
-		// TODO Auto-generated method stub
-		
 	}
 }
