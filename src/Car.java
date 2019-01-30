@@ -39,29 +39,46 @@ public abstract class Car implements Movable {
 	public void decrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
-
+	
 	public void gas(double amount) {
 		incrementSpeed(amount);
 	}
-
+	
+	/**
+	 * accelererar bilen
+	 * @param amount
+	 */
+	
 	public void brake(double amount) {
 		decrementSpeed(amount);
 		
 	}
+	
+	/**
+	 * bromsar ner bilen
+	 * @param amount
+	 */
 
 	@Override
 	public void move() {
-		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
 	public void turnLeft() {
-		x--;
+		x-=currentSpeed;
 	}
-
+	
+	/**
+	 * svänger vänster med bilen
+	 */
+	
 	@Override
 	public void turnRight() {
-		x++;
+		x+=currentSpeed;
 	}
+	
+	/**
+	 * svänger höger med bilen
+	 */
 }
