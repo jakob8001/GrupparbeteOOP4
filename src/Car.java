@@ -5,6 +5,7 @@ public abstract class Car implements Movable {
 	public double enginePower; // Engine power of the car
 	public double currentSpeed; // The current speed of the car
 	public Color color; // Color of the car
+	private float x,y;
 	public String modelName; // The car model name
 
 	public double getEnginePower() {
@@ -56,13 +57,11 @@ public abstract class Car implements Movable {
 
 	@Override
 	public void turnLeft() {
-		// TODO Auto-generated method stub
-		
+		x--;
 	}
 
 	@Override
 	public void turnRight() {
-		// TODO Auto-generated method stub
-		
+		x++;
 	}
 }
