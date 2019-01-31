@@ -11,14 +11,25 @@ public class Saab952 extends Car {
 		modelName = "Saab95";
 		stopEngine();
 	}
+	/**
+	 * sätter på turbon
+	 */
 
 	public void setTurboOn() {
 		turboOn = true;
 	}
-
+	
+	/**
+	 * stänger av turbon
+	 */
+	
 	public void setTurboOff() {
 		turboOn = false;
 	}
+	
+	/**
+	 * hur snabbt bilen åker
+	 */
 	
 	@Override
 	public double speedFactor() {
