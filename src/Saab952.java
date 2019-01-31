@@ -5,11 +5,9 @@ public class Saab952 extends Car {
 	public boolean turboOn;
 
 	public Saab952() {
-		color = Color.BLACK;
-		enginePower = 125;
-		turboOn = false;
-		modelName = "Saab95";
+		super(Color.BLACK, 125, "Saab952");
 		stopEngine();
+		turboOn = false;
 	}
 	/**
 	 * sätter på turbon
@@ -36,7 +34,7 @@ public class Saab952 extends Car {
 		double turbo = 1;
 		if (turboOn)
 			turbo = 1.3;
-		return enginePower * 0.01 * turbo;
+		return getEnginePower() * 0.01 * turbo;
 	}
 
 }

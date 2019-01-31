@@ -6,14 +6,14 @@ public class Volvo7402 extends Car {
 
 
 	public Volvo7402() {
-		color = Color.RED;
-		enginePower = 100;
-		modelName = "Volvo740";
+		super(Color.RED, 100, "Volvo7402");
 		stopEngine();
 	}
 
-
+	/**
+	 * hur snabbt bilen acceleererar
+	 */
 	public double speedFactor() {
-		return enginePower * 0.01 * trimFactor;
+		return getEnginePower() * 0.01 * trimFactor;
 	}
 }

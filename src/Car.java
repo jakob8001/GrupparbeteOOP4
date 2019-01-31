@@ -2,12 +2,18 @@ import javafx.scene.paint.Color;
 
 public abstract class Car implements Movable {
 
-	public double enginePower; // Engine power of the car
-	public double currentSpeed; // The current speed of the car
-	public Color color; // Color of the car
+	private double enginePower; // Engine power of the car
+	private double currentSpeed; // The current speed of the car
+	private Color color; // Color of the car
 	private float x,y;
-	public String modelName; // The car model name
+	private String modelName; // The car model name
 	
+	
+	public Car(Color C, double EP, String MN) {
+		color = C;
+		enginePower = EP;
+		modelName = MN;
+	}
 	/**
 	 * Returnerar enginePower 
 	 * @return
@@ -55,10 +61,8 @@ public abstract class Car implements Movable {
 	 * @param amount
 	 */
 	public void incrementSpeed(double amount) {
+		if (getCurrentSpeed() + speedFactor() * amount < currentSpeed) return;
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
-		
-		
-		
 	}
 	
 	/**
@@ -67,6 +71,7 @@ public abstract class Car implements Movable {
 	 */
 	
 	public void decrementSpeed(double amount) {
+		if (getCurrentSpeed() - speedFactor() * amount > currentSpeed) return;
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 	
