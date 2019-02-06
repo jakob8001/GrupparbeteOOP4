@@ -14,6 +14,7 @@ public abstract class Car implements Movable {
 		enginePower = EP;
 		modelName = MN;
 	}
+	
 	/**
 	 * Returnerar enginePower 
 	 * @return
