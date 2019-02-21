@@ -19,7 +19,7 @@ public class Scania extends Car {
 	 */
 	public void setTruckBed(boolean arg) {
 		bedActive = arg;
-		if (bedActive && currentSpeed > 0) {
+		if (bedActive && getCurrentSpeed() > 0) {
 			while (bedAngle > 0) {
 				if (System.currentTimeMillis() - timer >= bedTimer) {
 					bedAngle-=0.5;
