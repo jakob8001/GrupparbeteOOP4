@@ -19,7 +19,9 @@ public class ScaniaS730 extends Scania {
 		carCounter++;
 	}
 
-	
+/**
+ * ba tar bort skit, fan vet jag 	
+ */
 	public void removeCars() {
 		releaseCarCounter = 4;
 		if (!getBedActive()) {
