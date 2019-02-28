@@ -44,4 +44,8 @@ public abstract class truck extends Car {
 	}
 	
 }
+
+/**
+ * Negrer odert
+ */
 		
