@@ -12,7 +12,9 @@ public class ScaniaS730 extends Scania {
 		cars = new Car[carAmount];
 		releaseTimer = System.currentTimeMillis();
 	}
-	
+/*
+ * Lägger till en bil till flaket
+ */
 	public void addCarToLift(Car car) {
 		if (car == this) return;
 		cars[carCounter] = car;
@@ -20,7 +22,7 @@ public class ScaniaS730 extends Scania {
 	}
 
 /**
- * ba tar bort skit, fan vet jag 	
+ * plockar bort alla bilar på flaket	
  */
 	public void removeCars() {
 		releaseCarCounter = 4;
