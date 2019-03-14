@@ -26,7 +26,7 @@ public class Saab952 extends Car {
 	}
 	
 	/**
-	 * hur snabbt bilen åker
+	 * Ökar bilens hastighet med hjälp av turbon
 	 */
 	
 	@Override
